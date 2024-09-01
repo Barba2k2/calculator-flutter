@@ -1,7 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:math_expressions/math_expressions.dart';
 
 class CalculadoraPage extends StatefulWidget {
@@ -15,35 +13,35 @@ class _CalculadoraPageState extends State<CalculadoraPage> {
   String display = '0';
   List<String> history = [];
   bool newCalculation = false;
-  BannerAd? _bannerAd;
-  bool _isLoaded = false;
+  // BannerAd? _bannerAd;
+  // bool _isLoaded = false;
 
-  void loadAd() {
-    _bannerAd = BannerAd(
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111',
-      request: const AdRequest(),
-      size: AdSize.banner,
-      listener: BannerAdListener(
-        onAdLoaded: (ad) {
-          log('$ad loaded.');
-          setState(() {
-            _isLoaded = true;
-          });
-        },
-        onAdFailedToLoad: (ad, error) {
-          log('Failed to load a banner ad: ${error.message}');
-          _isLoaded = false;
-          ad.dispose();
-        },
-      ),
-    )..load();
-  }
+  // void loadAd() {
+  //   _bannerAd = BannerAd(
+  //     adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+  //     request: const AdRequest(),
+  //     size: AdSize.banner,
+  //     listener: BannerAdListener(
+  //       onAdLoaded: (ad) {
+  //         log('$ad loaded.');
+  //         setState(() {
+  //           _isLoaded = true;
+  //         });
+  //       },
+  //       onAdFailedToLoad: (ad, error) {
+  //         log('Failed to load a banner ad: ${error.message}');
+  //         _isLoaded = false;
+  //         ad.dispose();
+  //       },
+  //     ),
+  //   )..load();
+  // }
 
-  @override
-  void initState() {
-    super.initState();
-    loadAd();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   loadAd();
+  // }
 
   void onButtonPressed(String text) {
     setState(() {
@@ -139,17 +137,17 @@ class _CalculadoraPageState extends State<CalculadoraPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            if (_bannerAd != null && _isLoaded)
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.grey[800]!),
-                ),
-                child: SizedBox(
-                  height: _bannerAd!.size.height.toDouble(),
-                  child: AdWidget(ad: _bannerAd!),
-                ),
-              ),
+            // if (_bannerAd != null && _isLoaded)
+            //   Container(
+            //     decoration: BoxDecoration(
+            //       borderRadius: BorderRadius.circular(20),
+            //       border: Border.all(color: Colors.grey[800]!),
+            //     ),
+            //     child: SizedBox(
+            //       height: _bannerAd!.size.height.toDouble(),
+            //       child: AdWidget(ad: _bannerAd!),
+            //     ),
+            //   ),
             Container(
               alignment: Alignment.centerRight,
               padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 12),
