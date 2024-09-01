@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "548190192717",
+    "project_id": "calculator-a9351",
+    "storage_bucket": "calculator-a9351.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548190192717:android:4cbb6019e7052afe858804",
+        "android_client_info": {
+          "package_name": "br.com.barbatech.calculator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPY8hZk4NQTaRvxntoEVXf6dKIrhDtNCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
