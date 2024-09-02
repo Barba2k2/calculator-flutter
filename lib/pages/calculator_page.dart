@@ -204,9 +204,9 @@ class _CalculadoraPageState extends State<CalculadoraPage> {
   Widget buildButton(String text, {bool isSecondary = false}) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 4),
         child: AspectRatio(
-          aspectRatio: 1,
+          aspectRatio: 1.0,
           child: ElevatedButton(
             onPressed: () => onButtonPressed(text),
             style: ElevatedButton.styleFrom(
