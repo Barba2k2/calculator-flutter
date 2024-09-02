@@ -52,9 +52,9 @@ android {
     signingConfigs {
         release {
             keyAlias 'my-key-alias'
-            keyPassword 'my-key-password'
-            storeFile file('path/to/my-release-key.jks')
-            storePassword 'my-store-password'
+            keyPassword '252298'
+            storeFile file('calculator.jks')
+            storePassword '252298'
         }
     }
 
